@@ -25,17 +25,7 @@ console.log(type);
 // => 'string'
 ```
 
-The following types are supported:
-
-- `array`
-- `boolean`
-- `function`
-- `null`
-- `number`
-- `object`
-- `string`
-- `symbol`
-- `undefined`
+The types `array`, `boolean`, `function`, `null`, `number`, `object`, `string`, `symbol` and `undefined` are supported.
 
 ### Getting detailed type descriptions
 
