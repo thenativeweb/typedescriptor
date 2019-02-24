@@ -1,0 +1,28 @@
+{
+  "name": "typedescriptor",
+  "version": "0.0.0",
+  "description": "typedescriptor identifies and describes types.",
+  "contributors": [
+    {
+      "name": "Golo Roden",
+      "email": "golo.roden@thenativeweb.io"
+    }
+  ],
+  "main": "dist/TypeDescriptor.js",
+  "dependencies": {
+    "@babel/runtime": "7.3.1"
+  },
+  "devDependencies": {
+    "assertthat": "2.0.3",
+    "roboter": "4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/typedescriptor.git"
+  },
+  "keywords": [
+    "type",
+    "typeof"
+  ],
+  "license": "MIT"
+}
