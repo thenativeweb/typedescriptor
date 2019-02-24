@@ -25,7 +25,21 @@ console.log(type);
 // => 'string'
 ```
 
-To get a type descriptor object, call the static `from` function and hand over the value:
+The following types are supported:
+
+- `array`
+- `boolean`
+- `function`
+- `null`
+- `number`
+- `object`
+- `string`
+- `symbol`
+- `undefined`
+
+### Getting detailed type descriptions
+
+To get a detailed type descriptor object, call the static `from` function and hand over the value:
 
 ```javascript
 const typeDescriptor = Type.from('the native web');
