@@ -13,9 +13,9 @@ const values = {
   boolean: [
     true,
     false,
-    /* eslint-disable no-new-wrappers */
+    /* eslint-disable no-new-wrappers, unicorn/new-for-builtins */
     new Boolean(true)
-    /* eslint-enable no-new-wrappers */
+    /* eslint-enable no-new-wrappers, unicorn/new-for-builtins */
   ],
 
   function: [
@@ -40,9 +40,9 @@ const values = {
     Number.POSITIVE_INFINITY,
     Number.NEGATIVE_INFINITY,
     Number.NaN,
-    /* eslint-disable no-new-wrappers */
+    /* eslint-disable no-new-wrappers, unicorn/new-for-builtins */
     new Number(23)
-    /* eslint-enable no-new-wrappers */
+    /* eslint-enable no-new-wrappers, unicorn/new-for-builtins */
   ],
 
   object: [
@@ -60,9 +60,9 @@ const values = {
   string: [
     'the native web',
     '',
-    /* eslint-disable no-new-wrappers */
+    /* eslint-disable no-new-wrappers, unicorn/new-for-builtins */
     new String('the native web')
-    /* eslint-enable no-new-wrappers */
+    /* eslint-enable no-new-wrappers, unicorn/new-for-builtins */
   ],
 
   symbol: [
