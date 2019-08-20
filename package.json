@@ -6,15 +6,17 @@
     {
       "name": "Golo Roden",
       "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Hannes Leutloff",
+      "email": "hannes.leutloff@thenativeweb.io"
     }
   ],
-  "main": "dist/TypeDescriptor.js",
-  "dependencies": {
-    "@babel/runtime": "7.3.1"
-  },
+  "main": "lib/TypeDescriptor.js",
+  "dependencies": {},
   "devDependencies": {
-    "assertthat": "2.0.3",
-    "roboter": "4.0.0"
+    "assertthat": "3.2.0",
+    "roboter": "6.1.0"
   },
   "repository": {
     "type": "git",

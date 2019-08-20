@@ -2,7 +2,7 @@
 
 const assert = require('assertthat');
 
-const Type = require('../../src/TypeDescriptor'),
+const Type = require('../../lib/TypeDescriptor'),
       values = require('../shared/values');
 
 suite('TypeDescriptor', () => {
