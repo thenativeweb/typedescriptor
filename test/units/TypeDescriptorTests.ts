@@ -1,81 +1,78 @@
-'use strict';
+import assert from 'assertthat';
+import Type from '../../lib/TypeDescriptor';
+import values from '../shared/values';
 
-const assert = require('assertthat');
-
-const Type = require('../../lib/TypeDescriptor'),
-      values = require('../shared/values');
-
-suite('TypeDescriptor', () => {
-  test('is a function.', async () => {
+suite('TypeDescriptor', (): void => {
+  test('is a function.', async (): Promise<void> => {
     assert.that(Type).is.ofType('function');
   });
 
-  suite('of', () => {
-    test('is a function.', async () => {
+  suite('of', (): void => {
+    test('is a function.', async (): Promise<void> => {
       assert.that(Type.of).is.ofType('function');
     });
 
-    test(`returns 'array' for array values.`, async () => {
+    test(`returns 'array' for array values.`, async (): Promise<void> => {
       for (const value of values.array) {
         assert.that(Type.of(value)).is.equalTo('array');
       }
     });
 
-    test(`returns 'boolean' for boolean values.`, async () => {
+    test(`returns 'boolean' for boolean values.`, async (): Promise<void> => {
       for (const value of values.boolean) {
         assert.that(Type.of(value)).is.equalTo('boolean');
       }
     });
 
-    test(`returns 'function' for function values.`, async () => {
+    test(`returns 'function' for function values.`, async (): Promise<void> => {
       for (const value of values.function) {
         assert.that(Type.of(value)).is.equalTo('function');
       }
     });
 
-    test(`returns 'null' for null values.`, async () => {
+    test(`returns 'null' for null values.`, async (): Promise<void> => {
       for (const value of values.null) {
         assert.that(Type.of(value)).is.equalTo('null');
       }
     });
 
-    test(`returns 'number' for number values.`, async () => {
+    test(`returns 'number' for number values.`, async (): Promise<void> => {
       for (const value of values.number) {
         assert.that(Type.of(value)).is.equalTo('number');
       }
     });
 
-    test(`returns 'object' for object values.`, async () => {
+    test(`returns 'object' for object values.`, async (): Promise<void> => {
       for (const value of values.object) {
         assert.that(Type.of(value)).is.equalTo('object');
       }
     });
 
-    test(`returns 'string' for string values.`, async () => {
+    test(`returns 'string' for string values.`, async (): Promise<void> => {
       for (const value of values.string) {
         assert.that(Type.of(value)).is.equalTo('string');
       }
     });
 
-    test(`returns 'symbol' for symbol values.`, async () => {
+    test(`returns 'symbol' for symbol values.`, async (): Promise<void> => {
       for (const value of values.symbol) {
         assert.that(Type.of(value)).is.equalTo('symbol');
       }
     });
 
-    test(`returns 'undefined' for undefined values.`, async () => {
+    test(`returns 'undefined' for undefined values.`, async (): Promise<void> => {
       for (const value of values.undefined) {
         assert.that(Type.of(value)).is.equalTo('undefined');
       }
     });
   });
 
-  suite('from', () => {
-    test('is a function.', async () => {
+  suite('from', (): void => {
+    test('is a function.', async (): Promise<void> => {
       assert.that(Type.from).is.ofType('function');
     });
 
-    test(`returns an array descriptor for array values.`, async () => {
+    test(`returns an array descriptor for array values.`, async (): Promise<void> => {
       for (const value of values.array) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'array',
@@ -96,7 +93,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns a boolean descriptor for boolean values.`, async () => {
+    test(`returns a boolean descriptor for boolean values.`, async (): Promise<void> => {
       for (const value of values.boolean) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'boolean',
@@ -117,7 +114,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns a function descriptor for function values.`, async () => {
+    test(`returns a function descriptor for function values.`, async (): Promise<void> => {
       for (const value of values.function) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'function',
@@ -138,7 +135,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns a null descriptor for null values.`, async () => {
+    test(`returns a null descriptor for null values.`, async (): Promise<void> => {
       for (const value of values.null) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'null',
@@ -159,7 +156,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns a number descriptor for number values.`, async () => {
+    test(`returns a number descriptor for number values.`, async (): Promise<void> => {
       for (const value of values.number) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'number',
@@ -180,7 +177,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns an object descriptor for object values.`, async () => {
+    test(`returns an object descriptor for object values.`, async (): Promise<void> => {
       for (const value of values.object) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'object',
@@ -201,7 +198,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns a string descriptor for string values.`, async () => {
+    test(`returns a string descriptor for string values.`, async (): Promise<void> => {
       for (const value of values.string) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'string',
@@ -222,7 +219,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns a symbol descriptor for symbol values.`, async () => {
+    test(`returns a symbol descriptor for symbol values.`, async (): Promise<void> => {
       for (const value of values.symbol) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'symbol',
@@ -243,7 +240,7 @@ suite('TypeDescriptor', () => {
       }
     });
 
-    test(`returns an undefined descriptor for undefined values.`, async () => {
+    test(`returns an undefined descriptor for undefined values.`, async (): Promise<void> => {
       for (const value of values.undefined) {
         assert.that(Type.from(value)).is.equalTo({
           name: 'undefined',
