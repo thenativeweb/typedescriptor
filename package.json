@@ -16,7 +16,7 @@
   "types": "build/lib/TypeDescriptor.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "assertthat": "git+ssh://git@github.com/thenativeweb/assertthat.git#typescript",
+    "assertthat": "3.3.0",
     "roboter": "git+ssh://git@github.com/thenativeweb/roboter.git#add-typescript-support"
   },
   "repository": {

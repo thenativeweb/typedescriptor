@@ -72,7 +72,26 @@ const values = {
 
   undefined: [
     undefined
-  ]
+  ],
+
+  valueTypes: [] as any[],
+
+  referenceTypes: [] as any[]
 };
+
+values.valueTypes = [
+  ...values.boolean,
+  ...values.null,
+  ...values.number,
+  ...values.string,
+  ...values.undefined
+];
+
+values.referenceTypes = [
+  ...values.array,
+  ...values.function,
+  ...values.object,
+  ...values.symbol
+];
 
 export default values;

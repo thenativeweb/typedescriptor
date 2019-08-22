@@ -29,21 +29,20 @@ class TypeDescriptor {
 
   public isUndefined: boolean;
 
-  public constructor (value: any) {
+  protected constructor (value: any) {
     this.name = TypeDescriptor.of(value);
 
-    this.isValueType = valueTypes.includes(this.name);
-    this.isReferenceType = referenceTypes.includes(this.name);
-
-    this.isArray = this.name === 'array';
-    this.isBoolean = this.name === 'boolean';
-    this.isFunction = this.name === 'function';
-    this.isNull = this.name === 'null';
-    this.isNumber = this.name === 'number';
-    this.isObject = this.name === 'object';
-    this.isString = this.name === 'string';
-    this.isSymbol = this.name === 'symbol';
-    this.isUndefined = this.name === 'undefined';
+    this.isValueType = TypeDescriptor.isValueType(value);
+    this.isReferenceType = TypeDescriptor.isReferenceType(value);
+    this.isArray = TypeDescriptor.isArray(value);
+    this.isBoolean = TypeDescriptor.isBoolean(value);
+    this.isFunction = TypeDescriptor.isFunction(value);
+    this.isNull = TypeDescriptor.isNull(value);
+    this.isNumber = TypeDescriptor.isNumber(value);
+    this.isObject = TypeDescriptor.isObject(value);
+    this.isString = TypeDescriptor.isString(value);
+    this.isSymbol = TypeDescriptor.isSymbol(value);
+    this.isUndefined = TypeDescriptor.isUndefined(value);
   }
 
   public static of (value: any): string {
@@ -77,6 +76,50 @@ class TypeDescriptor {
 
   public static from (value: any): TypeDescriptor {
     return new TypeDescriptor(value);
+  }
+
+  public static isValueType (value: any): value is boolean | number | null | string | undefined {
+    return valueTypes.includes(TypeDescriptor.of(value));
+  }
+
+  public static isReferenceType (value: any): value is [] | Function | object | symbol {
+    return referenceTypes.includes(TypeDescriptor.of(value));
+  }
+
+  public static isArray (value: any): value is [] {
+    return TypeDescriptor.of(value) === 'array';
+  }
+
+  public static isBoolean (value: any): value is boolean {
+    return TypeDescriptor.of(value) === 'boolean';
+  }
+
+  public static isFunction (value: any): value is Function {
+    return TypeDescriptor.of(value) === 'function';
+  }
+
+  public static isNull (value: any): value is null {
+    return TypeDescriptor.of(value) === 'null';
+  }
+
+  public static isNumber (value: any): value is number {
+    return TypeDescriptor.of(value) === 'number';
+  }
+
+  public static isObject (value: any): value is object {
+    return TypeDescriptor.of(value) === 'object';
+  }
+
+  public static isString (value: any): value is string {
+    return TypeDescriptor.of(value) === 'string';
+  }
+
+  public static isSymbol (value: any): value is symbol {
+    return TypeDescriptor.of(value) === 'symbol';
+  }
+
+  public static isUndefined (value: any): value is undefined {
+    return TypeDescriptor.of(value) === 'undefined';
   }
 }
 
