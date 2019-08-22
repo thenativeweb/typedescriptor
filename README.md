@@ -63,7 +63,7 @@ console.log(typeDescriptor);
 //    }
 ```
 
-### TypeScript Type Guards
+### Using TypeScript type guards
 
 Since using the descriptors above doesn't tell TypeScript anything, there are type guards for every type check:
 
@@ -73,11 +73,11 @@ import Type from 'typedescriptor';
 const someValue = getSomeValue() as any;
 
 if (Type.isArray(someValue)) {
-    // TypeScript now realizes that `someValue` is of type []
+  // TypeScript now realizes that `someValue` is of type []
 }
 
 if (Type.isValueType(someValue)) {
-    // TypeScript now realizes that `someValue` is of type string | number | boolean | null | undefined
+  // TypeScript now realizes that `someValue` is of type string | number | boolean | null | undefined
 }
 ```
 
