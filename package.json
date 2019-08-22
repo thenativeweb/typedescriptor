@@ -17,7 +17,7 @@
   "dependencies": {},
   "devDependencies": {
     "assertthat": "3.3.0",
-    "roboter": "git+ssh://git@github.com/thenativeweb/roboter.git#add-typescript-support"
+    "roboter": "7.0.0"
   },
   "repository": {
     "type": "git",
