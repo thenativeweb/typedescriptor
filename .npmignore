@@ -1,3 +1,4 @@
 .circleci
 .dependabot
 test
+build/test

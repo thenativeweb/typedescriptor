@@ -12,11 +12,12 @@
       "email": "hannes.leutloff@thenativeweb.io"
     }
   ],
-  "main": "lib/TypeDescriptor.js",
+  "main": "build/lib/TypeDescriptor.js",
+  "types": "build/lib/TypeDescriptor.d.ts",
   "dependencies": {},
   "devDependencies": {
-    "assertthat": "3.2.0",
-    "roboter": "6.1.0"
+    "assertthat": "3.3.0",
+    "roboter": "7.0.0"
   },
   "repository": {
     "type": "git",

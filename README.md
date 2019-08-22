@@ -63,6 +63,24 @@ console.log(typeDescriptor);
 //    }
 ```
 
+### TypeScript Type Guards
+
+Since using the descriptors above doesn't tell TypeScript anything, there are type guards for every type check:
+
+```typescript
+import Type from 'typedescriptor';
+
+const someValue = getSomeValue() as any;
+
+if (Type.isArray(someValue)) {
+    // TypeScript now realizes that `someValue` is of type []
+}
+
+if (Type.isValueType(someValue)) {
+    // TypeScript now realizes that `someValue` is of type string | number | boolean | null | undefined
+}
+```
+
 ## Running the build
 
 To build this module use [roboter](https://www.npmjs.com/package/roboter).

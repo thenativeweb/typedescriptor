@@ -1,13 +1,11 @@
-'use strict';
-
 const values = {
   array: [
     [],
     [ 2, 3, 5, 7, 11 ],
-    /* eslint-disable no-array-constructor */
+    /* eslint-disable no-array-constructor, @typescript-eslint/no-array-constructor */
     new Array(),
     new Array(2, 3, 5, 7, 11)
-    /* eslint-enable no-array-constructor */
+    /* eslint-enable no-array-constructor, @typescript-eslint/no-array-constructor */
   ],
 
   boolean: [
@@ -19,13 +17,13 @@ const values = {
   ],
 
   function: [
-    /* eslint-disable no-empty-function, no-new-func */
-    function () {},
-    () => {},
-    function * () {},
-    async function () {},
+    /* eslint-disable no-empty-function, no-new-func, @typescript-eslint/no-empty-function */
+    function (): void {},
+    (): void => {},
+    function * (): IterableIterator<any> {},
+    async function (): Promise<void> {},
     new Function('left', 'right', 'return left + right')
-    /* eslint-enable no-empty-function, no-new-func */
+    /* eslint-enable no-empty-function, no-new-func, @typescript-eslint/no-empty-function */
   ],
 
   null: [
@@ -74,7 +72,26 @@ const values = {
 
   undefined: [
     undefined
-  ]
+  ],
+
+  valueTypes: [] as any[],
+
+  referenceTypes: [] as any[]
 };
 
-module.exports = values;
+values.valueTypes = [
+  ...values.boolean,
+  ...values.null,
+  ...values.number,
+  ...values.string,
+  ...values.undefined
+];
+
+values.referenceTypes = [
+  ...values.array,
+  ...values.function,
+  ...values.object,
+  ...values.symbol
+];
+
+export default values;
