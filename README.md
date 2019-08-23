@@ -23,7 +23,13 @@ $ npm install typedescriptor
 First you need to add a reference to typedescriptor to your application:
 
 ```javascript
-const Type = require('typedescriptor');
+const Type = require('typedescriptor').default;
+```
+
+If you use TypeScript, use the following code instead:
+
+```typescript
+import Type from 'typedescriptor';
 ```
 
 Then, to identify a value's type, call the static `of` function and hand over the value:
