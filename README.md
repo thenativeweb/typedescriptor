@@ -23,13 +23,17 @@ $ npm install typedescriptor
 First you need to add a reference to typedescriptor to your application:
 
 ```javascript
-const Type = require('typedescriptor');
+const TypeDescriptor = require('typedescriptor').default;
+```
+
+```typescript
+import TypeDescriptor from 'typedescriptor';
 ```
 
 Then, to identify a value's type, call the static `of` function and hand over the value:
 
 ```javascript
-const type = Type.of('the native web');
+const type = TypeDescriptor.of('the native web');
 
 console.log(type);
 // => 'string'
@@ -42,7 +46,7 @@ The types `array`, `boolean`, `function`, `null`, `number`, `object`, `string`, 
 To get a detailed type descriptor object, call the static `from` function and hand over the value:
 
 ```javascript
-const typeDescriptor = Type.from('the native web');
+const typeDescriptor = TypeDescriptor.from('the native web');
 
 console.log(typeDescriptor);
 // => {
@@ -68,15 +72,15 @@ console.log(typeDescriptor);
 Since using the descriptors above doesn't tell TypeScript anything, there are type guards for every type check:
 
 ```typescript
-import Type from 'typedescriptor';
+import TypeDescriptor from 'typedescriptor';
 
 const someValue = getSomeValue() as any;
 
-if (Type.isArray(someValue)) {
+if (TypeDescriptor.isArray(someValue)) {
   // TypeScript now realizes that `someValue` is of type []
 }
 
-if (Type.isValueType(someValue)) {
+if (TypeDescriptor.isValueType(someValue)) {
   // TypeScript now realizes that `someValue` is of type string | number | boolean | null | undefined
 }
 ```
