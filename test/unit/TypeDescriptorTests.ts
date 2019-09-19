@@ -308,6 +308,16 @@ suite('TypeDescriptor', (): void => {
           assert.that(Type.isArray(value)).is.false();
         }
       });
+
+      test('that TypeScript type annotation is correct.', async (): Promise<void> => {
+        // This test's content is useless, but it won't compile if the type
+        // annotation is wrong.
+        const arr = [ 'value' ] as any;
+
+        if (Type.isArray(arr)) {
+          assert.that(arr[0]).is.equalTo('value');
+        }
+      });
     });
 
     suite('isBoolean', (): void => {

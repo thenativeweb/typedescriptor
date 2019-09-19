@@ -82,11 +82,11 @@ class TypeDescriptor {
     return valueTypes.includes(TypeDescriptor.of(value));
   }
 
-  public static isReferenceType (value: any): value is [] | Function | object | symbol {
+  public static isReferenceType (value: any): value is any[] | Function | object | symbol {
     return referenceTypes.includes(TypeDescriptor.of(value));
   }
 
-  public static isArray (value: any): value is [] {
+  public static isArray (value: any): value is any[] {
     return TypeDescriptor.of(value) === 'array';
   }
 
