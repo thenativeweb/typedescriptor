@@ -94,4 +94,4 @@ values.referenceTypes = [
   ...values.symbol
 ];
 
-export default values;
+export { values };

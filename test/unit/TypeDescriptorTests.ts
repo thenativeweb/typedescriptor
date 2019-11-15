@@ -1,6 +1,6 @@
-import assert from 'assertthat';
-import Type from '../../lib/TypeDescriptor';
-import values from '../shared/values';
+import { assert } from 'assertthat';
+import { Type } from '../../lib/TypeDescriptor';
+import { values } from '../shared/values';
 
 suite('TypeDescriptor', (): void => {
   suite('of', (): void => {

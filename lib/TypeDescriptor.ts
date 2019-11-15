@@ -123,4 +123,4 @@ class TypeDescriptor {
   }
 }
 
-export default TypeDescriptor;
+export { TypeDescriptor as Type };
