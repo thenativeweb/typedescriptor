@@ -17,13 +17,13 @@ const values = {
   ],
 
   function: [
-    /* eslint-disable no-empty-function, no-new-func, @typescript-eslint/no-empty-function */
+    /* eslint-disable no-empty-function, no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
     function (): void {},
     (): void => {},
     function * (): IterableIterator<any> {},
     async function (): Promise<void> {},
     new Function('left', 'right', 'return left + right')
-    /* eslint-enable no-empty-function, no-new-func, @typescript-eslint/no-empty-function */
+    /* eslint-enable no-empty-function, no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
   ],
 
   null: [
