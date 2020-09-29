@@ -1,8 +1,8 @@
-const valueTypes = [ 'boolean', 'number', 'null', 'string', 'undefined' ];
-const referenceTypes = [ 'array', 'function', 'object', 'symbol' ];
+const valueTypes = new Set([ 'boolean', 'number', 'null', 'string', 'undefined' ]);
+const referenceTypes = new Set([ 'array', 'function', 'object', 'symbol' ]);
 
-const detectableTypes = [ 'boolean', 'function', 'number', 'string', 'symbol' ];
-const typeConstructors = [ Boolean, Number, String ];
+const detectableTypes = new Set([ 'boolean', 'function', 'number', 'string', 'symbol' ]);
+const typeConstructors = new Set([ Boolean, Number, String ]);
 
 class TypeDescriptor {
   public name: string;
@@ -55,7 +55,7 @@ class TypeDescriptor {
 
     const detectedType = typeof value;
 
-    if (detectableTypes.includes(detectedType)) {
+    if (detectableTypes.has(detectedType)) {
       return detectedType;
     }
 
@@ -64,7 +64,7 @@ class TypeDescriptor {
         return 'array';
       }
 
-      if (typeConstructors.includes(value.constructor)) {
+      if (typeConstructors.has(value.constructor)) {
         return value.constructor.name.toLowerCase();
       }
 
@@ -79,11 +79,12 @@ class TypeDescriptor {
   }
 
   public static isValueType (value: any): value is boolean | number | null | string | undefined {
-    return valueTypes.includes(TypeDescriptor.of(value));
+    return valueTypes.has(TypeDescriptor.of(value));
   }
 
+  // eslint-disable-next-line @typescript-eslint/ban-types
   public static isReferenceType (value: any): value is any[] | Function | object | symbol {
-    return referenceTypes.includes(TypeDescriptor.of(value));
+    return referenceTypes.has(TypeDescriptor.of(value));
   }
 
   public static isArray (value: any): value is any[] {
@@ -94,6 +95,7 @@ class TypeDescriptor {
     return TypeDescriptor.of(value) === 'boolean';
   }
 
+  // eslint-disable-next-line @typescript-eslint/ban-types
   public static isFunction (value: any): value is Function {
     return TypeDescriptor.of(value) === 'function';
   }
@@ -106,6 +108,7 @@ class TypeDescriptor {
     return TypeDescriptor.of(value) === 'number';
   }
 
+  // eslint-disable-next-line @typescript-eslint/ban-types
   public static isObject (value: any): value is object {
     return TypeDescriptor.of(value) === 'object';
   }
