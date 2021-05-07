@@ -10,10 +10,12 @@ const values = {
 
   boolean: [
     true,
-    false,
-    /* eslint-disable no-new-wrappers, unicorn/new-for-builtins */
-    new Boolean(true)
-    /* eslint-enable no-new-wrappers, unicorn/new-for-builtins */
+    false
+  ],
+
+  error: [
+    new Error('foo'),
+    new class extends Error {}('foo')
   ],
 
   function: [
@@ -24,6 +26,11 @@ const values = {
     async function (): Promise<void> {},
     new Function('left', 'right', 'return left + right')
     /* eslint-enable no-empty-function, no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
+  ],
+
+  map: [
+    new Map(),
+    new Map([[ 'foo', 'foo' ], [ 'bar', 'bar' ]])
   ],
 
   null: [
@@ -37,30 +44,25 @@ const values = {
     -0,
     Number.POSITIVE_INFINITY,
     Number.NEGATIVE_INFINITY,
-    Number.NaN,
-    /* eslint-disable no-new-wrappers, unicorn/new-for-builtins */
-    new Number(23)
-    /* eslint-enable no-new-wrappers, unicorn/new-for-builtins */
+    Number.NaN
   ],
 
   object: [
     {},
     { name: 'the native web' },
-    new Map(),
-    new Set(),
-    new WeakMap(),
-    new WeakSet(),
     /* eslint-disable no-new-object */
     new Object()
     /* eslint-enable no-new-object */
   ],
 
+  set: [
+    new Set(),
+    new Set([ 'foo', 'bar' ])
+  ],
+
   string: [
     'the native web',
-    '',
-    /* eslint-disable no-new-wrappers, unicorn/new-for-builtins */
-    new String('the native web')
-    /* eslint-enable no-new-wrappers, unicorn/new-for-builtins */
+    ''
   ],
 
   symbol: [
@@ -72,26 +74,7 @@ const values = {
 
   undefined: [
     undefined
-  ],
-
-  valueTypes: [] as any[],
-
-  referenceTypes: [] as any[]
+  ]
 };
-
-values.valueTypes = [
-  ...values.boolean,
-  ...values.null,
-  ...values.number,
-  ...values.string,
-  ...values.undefined
-];
-
-values.referenceTypes = [
-  ...values.array,
-  ...values.function,
-  ...values.object,
-  ...values.symbol
-];
 
 export { values };
