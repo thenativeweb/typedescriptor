@@ -12,8 +12,8 @@
       "email": "hannes.leutloff@thenativeweb.io"
     }
   ],
-  "main": "build/lib/TypeDescriptor.js",
-  "types": "build/lib/TypeDescriptor.d.ts",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "assertthat": "6.0.0",
