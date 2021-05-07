@@ -1,3 +1,17 @@
+# [4.0.0](https://github.com/thenativeweb/typedescriptor/compare/3.0.2...4.0.0) (2021-05-07)
+
+
+### Features
+
+* Rewrite library with focus on small type-guard functions. ([#296](https://github.com/thenativeweb/typedescriptor/issues/296)) ([91ef31d](https://github.com/thenativeweb/typedescriptor/commit/91ef31d82dd4e01ed5f959a2d1470062b351849b))
+
+
+### BREAKING CHANGES
+
+* The entire API is different. There is no `Typedescriptor` class anymore,
+just a bunch of type-guard functions and one function that returns a
+variable's type as a string.
+
 ## [3.0.2](https://github.com/thenativeweb/typedescriptor/compare/3.0.1...3.0.2) (2021-03-25)
 
 
