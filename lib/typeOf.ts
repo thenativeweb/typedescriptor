@@ -1,6 +1,6 @@
 import { isArray } from './isArray';
 import { isBoolean } from './isBoolean';
-import { isError } from './isError';
+import { isError } from 'defekt';
 import { isFunction } from './isFunction';
 import { isMap } from './isMap';
 import { isNull } from './isNull';

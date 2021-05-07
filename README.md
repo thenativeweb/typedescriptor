@@ -74,6 +74,8 @@ if (isNumber(value)) {
 
 The types `array`, `boolean`, `error`, `function`, `map`, `null`, `number`, `object`, `set`, `string`, `symbol` and `undefined` are supported.
 
+The `isError` implementation is re-exported from [`defekt`](https://github.com/thenativeweb/defekt/).
+
 ### Getting a variable's type name
 
 To get a variable's type as a string, use `typeOf`:
