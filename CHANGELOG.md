@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/thenativeweb/typedescriptor/compare/4.0.0...4.0.1) (2021-05-11)
+
+
+### Bug Fixes
+
+* bump hosted-git-info from 2.8.8 to 2.8.9 ([#297](https://github.com/thenativeweb/typedescriptor/issues/297)) ([abc2e94](https://github.com/thenativeweb/typedescriptor/commit/abc2e949f936d19002fd39ffd82c0c8a910e894e))
+
 # [4.0.0](https://github.com/thenativeweb/typedescriptor/compare/3.0.2...4.0.0) (2021-05-07)
 
 
