@@ -1,3 +1,10 @@
+## [4.0.7](https://github.com/thenativeweb/typedescriptor/compare/4.0.6...4.0.7) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump glob-parent from 5.1.1 to 5.1.2 ([#310](https://github.com/thenativeweb/typedescriptor/issues/310)) ([a2f4579](https://github.com/thenativeweb/typedescriptor/commit/a2f457910808d17e2a317287e2f9b5f752308b46))
+
 ## [4.0.6](https://github.com/thenativeweb/typedescriptor/compare/4.0.5...4.0.6) (2021-06-10)
 
 
