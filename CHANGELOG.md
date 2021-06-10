@@ -1,3 +1,10 @@
+## [4.0.5](https://github.com/thenativeweb/typedescriptor/compare/4.0.4...4.0.5) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump trim-newlines from 3.0.0 to 3.0.1 ([#312](https://github.com/thenativeweb/typedescriptor/issues/312)) ([fad917c](https://github.com/thenativeweb/typedescriptor/commit/fad917ce10f807ddb44b17e9b3619292aec720b6))
+
 ## [4.0.4](https://github.com/thenativeweb/typedescriptor/compare/4.0.3...4.0.4) (2021-05-31)
 
 
