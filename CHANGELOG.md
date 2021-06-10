@@ -1,3 +1,10 @@
+## [4.0.6](https://github.com/thenativeweb/typedescriptor/compare/4.0.5...4.0.6) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump normalize-url from 6.0.0 to 6.0.1 ([#311](https://github.com/thenativeweb/typedescriptor/issues/311)) ([25eb88c](https://github.com/thenativeweb/typedescriptor/commit/25eb88cafdedb6e4f40c2ced03901ab16c99cc4c))
+
 ## [4.0.5](https://github.com/thenativeweb/typedescriptor/compare/4.0.4...4.0.5) (2021-06-10)
 
 
