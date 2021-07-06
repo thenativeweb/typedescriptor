@@ -1,3 +1,10 @@
+## [4.0.9](https://github.com/thenativeweb/typedescriptor/compare/4.0.8...4.0.9) (2021-07-06)
+
+
+### Bug Fixes
+
+* bump defekt from 7.2.3 to 7.3.0 ([#320](https://github.com/thenativeweb/typedescriptor/issues/320)) ([8e4db76](https://github.com/thenativeweb/typedescriptor/commit/8e4db76a5e9d6746ac0a06e06b0d9d831022a8b7))
+
 ## [4.0.8](https://github.com/thenativeweb/typedescriptor/compare/4.0.7...4.0.8) (2021-06-28)
 
 
