@@ -1,3 +1,10 @@
+## [4.0.12](https://github.com/thenativeweb/typedescriptor/compare/4.0.11...4.0.12) (2021-08-15)
+
+
+### Bug Fixes
+
+* bump path-parse from 1.0.6 to 1.0.7 ([#328](https://github.com/thenativeweb/typedescriptor/issues/328)) ([88e939f](https://github.com/thenativeweb/typedescriptor/commit/88e939f31b6eb27b5426ba6d4d77691101c1689d))
+
 ## [4.0.11](https://github.com/thenativeweb/typedescriptor/compare/4.0.10...4.0.11) (2021-07-26)
 
 
