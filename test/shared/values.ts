@@ -2,10 +2,10 @@ const values = {
   array: [
     [],
     [ 2, 3, 5, 7, 11 ],
-    /* eslint-disable no-array-constructor, @typescript-eslint/no-array-constructor */
+    /* eslint-disable @typescript-eslint/no-array-constructor */
     new Array(),
     new Array(2, 3, 5, 7, 11)
-    /* eslint-enable no-array-constructor, @typescript-eslint/no-array-constructor */
+    /* eslint-enable @typescript-eslint/no-array-constructor */
   ],
 
   boolean: [
@@ -19,13 +19,13 @@ const values = {
   ],
 
   function: [
-    /* eslint-disable no-empty-function, no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
+    /* eslint-disable no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
     function (): void {},
     (): void => {},
     function * (): IterableIterator<any> {},
     async function (): Promise<void> {},
     new Function('left', 'right', 'return left + right')
-    /* eslint-enable no-empty-function, no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
+    /* eslint-enable no-new-func, @typescript-eslint/no-empty-function, @typescript-eslint/no-implied-eval */
   ],
 
   map: [
