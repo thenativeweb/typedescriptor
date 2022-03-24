@@ -75,6 +75,6 @@ const values = {
   undefined: [
     undefined
   ]
-};
+} as const;
 
 export { values };

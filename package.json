@@ -16,11 +16,11 @@
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
   "dependencies": {
-    "defekt": "8.2.0"
+    "defekt": "9.1.0"
   },
   "devDependencies": {
-    "assertthat": "6.4.0",
-    "roboter": "12.7.0",
+    "assertthat": "6.5.1",
+    "roboter": "13.0.0",
     "semantic-release-configuration": "2.0.7"
   },
   "scripts": {},
