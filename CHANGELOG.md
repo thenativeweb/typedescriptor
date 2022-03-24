@@ -1,3 +1,10 @@
+## [4.0.13](https://github.com/thenativeweb/typedescriptor/compare/4.0.12...4.0.13) (2022-03-24)
+
+
+### Bug Fixes
+
+* Update dependencies. ([#348](https://github.com/thenativeweb/typedescriptor/issues/348)) ([46c0c18](https://github.com/thenativeweb/typedescriptor/commit/46c0c1856ea67d543a15d21d1573243c37b4eea0))
+
 ## [4.0.12](https://github.com/thenativeweb/typedescriptor/compare/4.0.11...4.0.12) (2021-08-15)
 
 
