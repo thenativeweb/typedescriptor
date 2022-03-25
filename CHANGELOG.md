@@ -1,3 +1,10 @@
+## [4.0.14](https://github.com/thenativeweb/typedescriptor/compare/4.0.13...4.0.14) (2022-03-25)
+
+
+### Bug Fixes
+
+* bump minimist from 1.2.5 to 1.2.6 ([#349](https://github.com/thenativeweb/typedescriptor/issues/349)) ([8909d72](https://github.com/thenativeweb/typedescriptor/commit/8909d723673f6783d761312b13f5d2ff1331eac3))
+
 ## [4.0.13](https://github.com/thenativeweb/typedescriptor/compare/4.0.12...4.0.13) (2022-03-24)
 
 
